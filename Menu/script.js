@@ -1,8 +1,8 @@
 // Sample data (replace with your actual data)
 var menuItems = [
     { name: 'Pizza, Italy', imageUrl: 'pizza.jpeg', price: '$11', rating: 4.0, description: "Slices to meet you, my friend"},
-    { name: 'Burger, America/Germany', imageUrl: 'burger.avif', price: '$10', rating: 5.0, description: "You are the cheese to my burger"},
-    { name: 'Sushi, China/Japan', imageUrl: 'sushi.webp', price: '$12', rating: 3.0, description: "This is how I roll"},
+    { name: 'Burger, America', imageUrl: 'burger.avif', price: '$10', rating: 5.0, description: "You are the cheese to my burger"},
+    { name: 'Sushi, Japan', imageUrl: 'sushi.webp', price: '$12', rating: 3.0, description: "This is how I roll"},
   ];
   
   $(document).ready(function() {
