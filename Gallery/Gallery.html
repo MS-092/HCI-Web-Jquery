@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Image Gallery</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="../index.html">Home</a>
+    </nav>
+
+    <div class="filter-bar">
+        <button onclick="filterImages('all')">All</button>
+        <button onclick="filterImages('High-Level')">High-level language</button>
+        <button onclick="filterImages('Low-level')">Low-Level language</button>
+        <button onclick="filterImages('Others')">Others</button>
+    </div>
+
+    <div class="gallery">
+        <div class="image High-Level" data-id="1"><img src="./images/python.png" alt="Python"></div>
+        <div class="image High-Level" data-id="1"><img src="./images/C++.png" alt="C++"></div>
+        <div class="image High-Level" data-id="1"><img src="./images/PHP.png" alt="PHP"></div>
+        <div class="image High-Level" data-id="1"><img src="./images/Javascript.png" alt="Javascript"></div>
+        <div class="image High-Level" data-id="1"><img src="./images/Golang.png" alt="Golang"></div>
+
+        <div class="image Low-level" data-id="2"><img src="./images/asseembly.png" alt="Assembly"></div>
+        <div class="image Low-level" data-id="2"><img src="./images/machine.jpeg" alt="Machine"></div>
+
+        <div class="image Others" data-id="3"><img src="./images/scikit.png" alt="Scikit"></div>
+        <div class="image Others" data-id="3"><img src="./images/tensorflow.png" alt="Tensorflow"></div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
