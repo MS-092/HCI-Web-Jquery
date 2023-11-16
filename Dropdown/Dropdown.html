@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Dropdown Surprises</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      transition: background-color 0.5s ease;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      padding: 10px;
+      min-width: 160px;
+      z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .surprise {
+      cursor: pointer;
+      color: #333;
+      text-decoration: none;
+      display: block;
+      padding: 8px;
+      transition: background-color 0.3s;
+    }
+
+    .surprise:hover {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="dropdown">
+    <span class="surprise-trigger">Category 1</span>
+    <div class="dropdown-content">
+      <a class="surprise" href="#">Custom Surprise A</a>
+      <a class="surprise" href="#">Custom Surprise B</a>
+      <a class="surprise" href="#">Custom Surprise C</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <span class="surprise-trigger">Category 2</span>
+    <div class="dropdown-content">
+      <a class="surprise" href="#">Custom Surprise X</a>
+      <a class="surprise" href="#">Custom Surprise Y</a>
+      <a class="surprise" href="#">Custom Surprise Z</a>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.surprise').click(function(){
+        // Get the text of the clicked surprise
+        var selectedSurpriseText = $(this).text();
+        
+        // Add a fade-in animation to the surprises
+        $('.surprise-display').fadeOut(300, function(){
+          // Update the surprise text
+          $(this).text('Surprise: ' + selectedSurpriseText);
+
+          // Randomly generate a background color
+          var randomColor = getRandomColor();
+          
+          // Change the background color of the body with a fade effect
+          $('body').css('background-color', randomColor).fadeIn(300);
+        }).fadeIn(300);
+      });
+
+      // Function to generate a random color in hexadecimal format
+      function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+    });
+  </script>
+</body>
+</html>

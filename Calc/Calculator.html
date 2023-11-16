@@ -1,0 +1,71 @@
+<!--Dynamic Price Calculator-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Courses Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        img {
+            width: 50%;
+            height: 50%;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="../index.html">Home</a>
+</nav>
+
+<div class="menu-container">
+    <div class="menu-item" data-name="Web Development" data-price="39.99">
+        <img src="Web_Dev.jpeg" alt="Web Development Course">
+        <h3>Web Development</h3>
+        <p class="price">$39.99</p>
+        <div class="hover-card">
+            <p>Master the art of web development by learning HTML/CSS/Javascript</p>
+        </div>
+    </div>
+
+    <div class="menu-item" data-name="Game Development" data-price="29.99">
+        <img src="Game_Dev.avif" alt="Game Development Course">
+        <h3>Game Development</h3>
+        <p class="price">$29.99</p>
+        <div class="hover-card">
+            <p>Master the art of game development by learning C# and Unity</p>
+        </div>
+    </div>
+
+    <div class="menu-item" data-name="App Development" data-price="49.99">
+        <img src="App_Dev.jpeg" alt="App Development Course">
+        <h3>App Development</h3>
+        <p class="price">$49.99</p>
+        <div class="hover-card">
+            <p>Master the art of app development by learning Java and Kotlin</p>
+        </div>
+    </div>
+
+    <div class="cart-container">
+        <h2>Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="cart-total">0.00</span></p>
+        <button id="checkout-btn">Checkout</button>
+        <button id="clear-btn">Clear Cart</button>
+    </div>
+</div>
+
+<script src="scripts.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
